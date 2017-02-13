@@ -1,7 +1,7 @@
 
 # RND
 
-### Random data generator.
+### Random and sequence character data generator.
 
 
 ##### RND v.1.2
@@ -11,20 +11,28 @@
 
 ## Purpose
 
-Flexibly generate random data:
+### Create:
 
-1. Specific file size (e.g. 607 bytes, 10MB) for integrity, processing, hashing, network, and benchmarking tests (creating non-sparse files).
-2. Random restricted range ASCII character stream.
-3. ASCII control characters.
-4. Random or pre-defined text as content filler.
-5. File overwrites to the exact byte count.
-6. Long password strings.
+### Random Character Streams and Files
 
-Additionally, create specific data:
++ Random and random range ASCII character streams.
++ Random ASCII control codes.
++ Long password strings.
 
-1. Specific character sequence.
-2. Character range sequence.
-3. Unicode character range sequence.
+### Repeating Text Content
+
++ Repeating text strings for content filler.
+
+### Random File Data
+
++ Specific file size (e.g. 607 bytes, 10MB) for file integrity, processing, hashing, network, and benchmarking tests (non-sparse files created).
++ Existing file overwrites to the exact byte count.
+
+### Sequence / Fuzzing Characters
+
++ Specific byte / control code sequence.
++ Character range sequence.
++ Unicode character range sequence.
 
 
 ## OS Support
@@ -78,7 +86,7 @@ Additionally, create specific data:
     rnd -c 1k 0 255 | nc 192.168.1.20 80    pipe 1kB of characters to 'netcat' to send to 192.168.1.20 on port 80 (test web server response)
     rnd -c 1k 65 90 | nc 192.168.1.20 80    same as above, but with A to Z, triggering an HTTP 501 in Apache/2.4.16
 
-    rnd -p                                  quick option to generate a 32-character password (! to ~)
+    rnd -p                                  quick way to generate a complex 32-character password (! to ~)
 
 
 #### Strings
@@ -128,7 +136,7 @@ RND generates pseudo-random data via the Win32 Crypto API or */dev/urandom* on L
 
 Install [FreeBASIC](http://www.freebasic.net/forum/viewforum.php?f=1) compiler (fbc).
 
-(RND can be compiled with either x32 or x64 version of fbc.)
+(RND can be compiled with either the x32 or x64 version of fbc.)
 
 Ensure GCC is available: `whereis gcc`
 
