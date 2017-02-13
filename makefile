@@ -7,7 +7,7 @@ NAME = rnd
 INPUTLIST = rnd.bas
 
 
-codecounter:
+rnd:
 	$(CC) $(CFLAGS) $(INPUTLIST) -x $(NAME)
 
 install:
