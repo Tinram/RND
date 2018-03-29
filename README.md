@@ -21,7 +21,7 @@
 
 ### Repeating Text Content
 
-+ Repeating text strings for content filler.
++ Repeating text strings for content filler e.g. *Lorem ipsum*.
 
 ### Random File Data
 
@@ -93,7 +93,7 @@
 
     rnd -s                                  255 instances of the text string 'lorem ipsum '
     rnd -s 100                              100 instances of 'lorem ipsum '
-    rnd -s 100 "test text "                 100 instances of any chosen text (if text contains spaces, the string must be quoted)
+    rnd -s 100 "junk text "                 100 instances of any chosen text (if text contains spaces, the string must be double quoted)
     rnd -s 10000 test dump.txt              output a file called dump.txt containing 10,000 instances of 'test' using a fast file dump
                                                 (some string patterns may corrupt when viewing in some editors)
 
@@ -134,42 +134,42 @@ RND generates pseudo-random data via the Win32 Crypto API or */dev/urandom* on L
 
 ## Build
 
-Install [FreeBASIC](http://www.freebasic.net/forum/viewforum.php?f=1) compiler (fbc).
+Install [FreeBASIC](http://www.freebasic.net/forum/viewforum.php?f=1) compiler (*fbc*).
 
-(RND can be compiled with either the x32 or x64 version of fbc.)
+(RND can be compiled with either the x32 or x64 version of *fbc*.)
 
 Ensure GCC is available: `whereis gcc`
 
 
 ### Linux
 
-    make
+        make
 
 or full process:
 
-    make && make install
+        make && make install
 
 
 ### Windows / Compile Manually
 
-    fbc rnd.bas -gen gcc -O max
+        fbc rnd.bas -gen gcc -O max
 
 
 ## Other
 
-On both Linux and Windows, it's more convenient for RND to be available from any directory location via the PATH system variable (rather than copying the executable file to the directory where needed).
+On both Linux and Windows, it's more convenient for RND to be available from any directory location via the *$PATH* system variable (rather than copying the executable file to the directory where needed).
 
 
 ### Linux
 
-    make install
+        make install
 
 Or move the *rnd* executable to a location such as */usr/local/bin* (location must be present in $PATH).
 
 
 ### Windows
 
-[Windows key + Break] > Advanced tab > Environmental Variables button > click Path line > Edit button > Variable value - append at the end of existing line info: *C:\directory\path\to\rnd.exe\;*
+*Windows key* + `Break` > *Advanced* tab > *Environmental Variables* button > click *Path* line > *Edit* button > *Variable* value - append at the end of existing line info: *C:\directory\path\to\rnd.exe\;*
 
 
 ## License
