@@ -86,7 +86,7 @@
     rnd -c 1k 0 255 | nc 192.168.1.20 80    pipe 1kB of characters to 'netcat' to send to 192.168.1.20 on port 80 (test web server response)
     rnd -c 1k 65 90 | nc 192.168.1.20 80    same as above, but with A to Z, triggering an HTTP 501 in Apache/2.4.16
 
-    rnd -p                                  quick way to generate a complex 32-character password (! to ~)
+    rnd -p                                  generate a complex 32-character password (! to ~)
 
 
 #### Strings
@@ -143,16 +143,22 @@ Ensure GCC is available: `whereis gcc`
 
 ### Linux
 
-        make
+```bash
+    make
+```
 
 or full process:
 
-        make && make install
+```bash
+    make && make install
+```
 
 
 ### Windows / Compile Manually
 
-        fbc rnd.bas -gen gcc -O max
+```bash
+    fbc rnd.bas -gen gcc -O max
+```
 
 
 ## Other
@@ -162,14 +168,16 @@ On both Linux and Windows, it's more convenient for RND to be available from any
 
 ### Linux
 
-        make install
+```bash
+    make install
+```
 
-Or move the *rnd* executable to a location such as */usr/local/bin* (location must be present in $PATH).
+Or move the *rnd* executable to a location such as */usr/local/bin* (location must be present in *$PATH*).
 
 
 ### Windows
 
-*Windows key* + `Break` > *Advanced* tab > *Environmental Variables* button > click *Path* line > *Edit* button > *Variable* value - append at the end of existing line info: *C:\directory\path\to\rnd.exe\;*
+*Windows key* + `Break` > *Advanced* tab > *Environmental Variables* button > click *Path* line > *Edit* button > *Variable* value &ndash; append at the end of existing line info: *C:\directory\path\to\rnd.exe\;*
 
 
 ## License
