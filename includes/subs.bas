@@ -5,8 +5,8 @@
 '
 ' Purpose:      Subroutines for rnd.bas
 ' Copyright:    Martin Latter, June 2012.
-' Updated:      April 2016.
-' License:      GNU GPL version 3.0 (GPL v3); http://www.gnu.org/licenses/gpl.html
+' Updated:      August 2023.
+' License:      GNU GPL version 3.0 (GPL v3); https://www.gnu.org/licenses/gpl-3.0.html
 ' URL:          https://github.com/Tinram/RND.git
 '
 '-----------------------------------------------------------------------------------
@@ -563,7 +563,7 @@ SUB displayOptions()
 
 	DIM AS STRING sOptions
 
-	sOptions = !"RND\ncopysense.co.uk\n\n"
+	sOptions = !"RND\n\n"
 	sOptions += !"Usage:\n"
 	sOptions += !"\trnd -c [num] [low high] [file]\n"
 	sOptions += !"\trnd -s [num] [\"string\"] [file]\n"

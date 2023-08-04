@@ -6,7 +6,7 @@
 ' Purpose:      Random data generator (crypto-secure) and large file dump (non-crypto-secure).
 ' Copyright:    Martin Latter, June 2012.
 ' Version:      1.2
-' License:      GNU GPL version 3.0 (GPL v3); http://www.gnu.org/licenses/gpl.html
+' License:      GNU GPL version 3.0 (GPL v3); https://www.gnu.org/licenses/gpl-3.0.html
 ' URL:          https://github.com/Tinram/RND.git
 '
 '----------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ DECLARE SUB displayOptions()
 
 #INCLUDE "includes/subs.bas"
 
-CONST AS STRING RND_VERSION = "1.2.2.0"
+CONST AS STRING RND_VERSION = "1.2.3.0"
 
 #IFDEF __FB_64BIT__
 	CONST AS STRING ARCH = "x64"
